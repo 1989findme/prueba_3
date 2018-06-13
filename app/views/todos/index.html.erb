@@ -1,0 +1,10 @@
+<% @todos.each do |todo| %>
+<h1> <%= link_to todo.description, todo %> </h1>
+ <p> <%= todo.completed %> </p>
+<%= link_to "Crear", todo, method: :create %>
+<%= link_to "Show", todo, method: :show %>
+<%= link_to "Edit", todo, method: :edit %>
+<%= link_to "Borrar", todo, method: :delete %>
+<% end %>
+
+<h1>Tutito1</h1>
