@@ -1,7 +1,1 @@
-<%= form_with model: @todo, local: true do |form| %>
- <%= form.label :description, "Descripción" %>
- <%= form.text_field :description%>
- <%= form.label :completed, "completado" %>
- <%= form.text_field :completed%>
- <%= form.submit "Crear" %>
-<% end %>
+<%= render 'todos/form' %>
