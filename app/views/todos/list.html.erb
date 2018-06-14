@@ -1,4 +1,19 @@
+<h1>Pages Lista</h1>
+
 <div class="row">
-  <div class="col-md-6">Listar no completados</div>
-  <div class="col-md-6">Listar completados</div>
+  <div class="col-md-6">Listar no completados
+  <% @todos.each do |todo| %>
+  <%if todo.completed == false %>
+  <%= todo.description %>
+  <% end %>
+  <%end %>
+  </div>
+
+  <div class="col-md-6">Listar completados
+    <% @todos.each do |todo| %>
+    <%if todo.completed == true %>
+    <%= todo.description %>
+    <% end %>
+    <%end %>
+  </div>
 </div>
