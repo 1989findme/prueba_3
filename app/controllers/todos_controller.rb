@@ -9,9 +9,12 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
-    @todo.save
-    redirect_to todos_path
+  if @todo.save
+    redirect_to todos_path, notice: "Se guardo con exito"
+  else
+      redirect_to todos_path, alert: "Error, falta descripción"
   end
+end
 
   def show
     @todo = Todo.find(params[:id])
