@@ -10,9 +10,9 @@ class TodosController < ApplicationController
   def create
     @todo = Todo.new(todo_params)
   if @todo.save
-    redirect_to todos_path, notice: "Se guardo con exito"
+    redirect_to todos_new_path, notice: "Se guardo con exito"
   else
-      redirect_to todos_path, alert: "Error, falta descripción"
+      redirect_to todos_new_path, alert: "Error, falta descripción"
   end
 end
 
