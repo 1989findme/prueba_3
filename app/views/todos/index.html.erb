@@ -4,9 +4,9 @@
   <% @todos.each do |todo| %>
   <h1> <%= link_to todo.description, todo %> </h1>
   <p> <%= todo.completed %> </p>
-  <%= link_to "Show", todo, class: 'btn btn-outline-secondary' %>
-  <%= link_to "Edit", edit_todo_path(todo.id), class: 'btn btn-outline-secondary' %>
-  <%= link_to "Destroy", todo, method: :delete, class: 'btn btn-outline-secondary' %>
+  <%= link_to "Show", todo, class: 'btn btn-primary' %>
+  <%= link_to "Edit", edit_todo_path(todo.id), class: 'btn btn-success' %>
+  <%= link_to "Destroy", todo, method: :delete, class: 'btn btn-danger' %>
   <hr/>
   <% end %>
 </div>

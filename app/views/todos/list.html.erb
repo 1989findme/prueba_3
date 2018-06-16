@@ -5,17 +5,18 @@
     <% @todos.each do |todo| %>
     <%if todo.completed == false %>
     <ul>
-    <li><%= todo.description %></li>
-  </ul>
+      <li><%= todo.description %>  </li>
+      <%= link_to "Completado", complete_todo_path(todo.id),  class: 'btn btn-info' %>
+      <% end %>
+    </ul>
     <% end %>
-    <%end %>
   </div>
 
   <div class="col-md-6">  <h2>Listar completados</h2>
     <% @todos.each do |todo| %>
     <%if todo.completed == true %>
     <ul>
-    <li><%= todo.description %></li>
+      <li><%= todo.description %></li>
     </ul>
     <% end %>
     <%end %>

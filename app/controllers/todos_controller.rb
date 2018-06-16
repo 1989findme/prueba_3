@@ -38,8 +38,8 @@ end
 
  def complete
      @todo = Todo.find(params[:id])
-     completed = true
-     redirect_to todos_path
+     @todo.update(completed: true)
+     redirect_to todos_list_path
  end
 
  def list
